@@ -17,8 +17,8 @@ window.onload = () => {
   rightArrow.onclick = () => {
     if(clickable){
       clickable = false;
-      let q = slide.length - 2
-      if(currentSlide == slide.length - 2){
+      let q = slide.length - 1
+      if(currentSlide == slide.length - 1){
         slide[currentSlide].style.width = '0%'
         slide[currentSlide].style.zIndex = '6000'
         removeActiveClass(slide, currentSlide)
@@ -91,7 +91,7 @@ window.onload = () => {
         }, howFast)
         removeActiveClass(slide, currentSlide)
         currentSlide = slide.length;
-        addActiveClass(slide, currentSlide);
+        addActiveClass(slide, currentSlide - 1);
       }else{
         slide[0].style.width = '0%'
         setTimeout(function(){
