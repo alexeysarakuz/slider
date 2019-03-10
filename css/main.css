@@ -12,7 +12,7 @@
   height: 100vh !important;
   min-height: 600px;
   max-height: 1020px;
-  padding-top: 630px;
+  padding-top: 600px;
   padding-bottom: 250px;
   width: 100%;
   overflow: hidden;
@@ -55,6 +55,17 @@
 .slide{
   transition: width 1.5s;
   overflow: hidden;
+}
+
+.slide-content .text{
+  color: #fff;
+  font-size: 50px;
+  z-index: 3000;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  transform: translate(-50%, -50%);
 }
 
 .slide-content{
@@ -243,26 +254,52 @@
   background-image: url('../img/slider/12-3.jpg');
 }
 
+#slider{
+  display: none;
+}
+
+#slider.active{
+  display: block;
+}
+
 .slider__arrows .slider__arrows-right{
-  width: 30px;
-  height: 30px;
-  border-radius: 30px;
-  background-color: red;
+  width: 50px;
+  height: 50px;
+  border: 3px solid #fff;
   position: absolute;
   z-index: 10000;
   bottom: 30px;
+  color: #fff;
   right: 30px;
+  text-align: center;
+  padding-top: 10px;
+  cursor: pointer;
+  transition: .3s;
 }
 
 .slider__arrows .slider__arrows-left{
-  width: 30px;
-  height: 30px;
-  border-radius: 30px;
-  background-color: green;
+  width: 50px;
+  height: 50px;
+  border: 3px solid #fff;
   position: absolute;
   z-index: 10000;
   bottom: 30px;
-  right: 90px;
+  color: #fff;
+  right: 100px;
+  text-align: center;
+  padding-top: 10px;
+  cursor: pointer;
+  transition: .3s;
+}
+
+html body .slider__arrows .slider__arrows-left:active{
+  background-color: #fff;
+  color: #000;
+}
+
+html body .slider__arrows .slider__arrows-right:active{
+  background-color: #fff;
+  color: #000;
 }
 
 @keyframes after{

@@ -1,4 +1,6 @@
 window.onload = () => {
+  let slider = document.getElementById('slider');
+  slider.classList.add('active');
   let slide = document.getElementsByClassName("slide");
   const leftArrow = document.getElementsByClassName("slider__arrows-left")[0];
   const rightArrow = document.getElementsByClassName("slider__arrows-right")[0];
