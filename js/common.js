@@ -90,6 +90,7 @@ window.onload = () => {
           clickable = true;
         }, howFast)
         removeActiveClass(slide, currentSlide)
+        currentSlide = slide.length;
         addActiveClass(slide, currentSlide);
       }else{
         slide[0].style.width = '0%'
