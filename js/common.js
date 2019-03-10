@@ -67,6 +67,7 @@ window.onload = () => {
 
     if(clickable){
       clickable = false;
+      alert(currentSlide)
       if(currentSlide == 0){
         for(let i = 0; i < slide.length; i++){
           slide[i].style.transition = '0s';
@@ -90,7 +91,7 @@ window.onload = () => {
           clickable = true;
         }, howFast)
         removeActiveClass(slide, currentSlide)
-        currentSlide = slide.length - 1;
+        alert(currentSlide)
         addActiveClass(slide, currentSlide);
       }else{
         slide[0].style.width = '0%'
